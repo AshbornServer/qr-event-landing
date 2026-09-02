@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR-Event — Rassemblez vos souvenirs d'événements</title>
+  <meta name="description" content="QR-Event : les invités scannent un QR code et déposent photos, vidéos et messages. Tout rassemblé au même endroit après la fête.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;background:#0f0f0f;color:#f5f5f5;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem}
+    .logo{font-size:2.4rem;font-weight:700;margin-bottom:.4rem;background:linear-gradient(135deg,#a78bfa,#6366f1);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .tagline{font-size:1.1rem;color:#a1a1aa;margin-bottom:2.5rem;max-width:480px;line-height:1.6}
+    .features{display:flex;gap:1.5rem;margin-bottom:3rem;flex-wrap:wrap;justify-content:center;max-width:600px}
+    .feature{background:#1a1a1a;border:1px solid #27272a;border-radius:12px;padding:1.4rem 1.2rem;flex:1;min-width:160px}
+    .feature .icon{font-size:1.8rem;margin-bottom:.6rem}
+    .feature h3{font-size:.95rem;font-weight:600;margin-bottom:.3rem}
+    .feature p{font-size:.8rem;color:#71717a;line-height:1.4}
+    .cta{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border:none;padding:.9rem 2.2rem;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;transition:opacity .2s}
+    .cta:hover{opacity:.85}
+    .cta:disabled{opacity:.5;cursor:default}
+    .notice{margin-top:1rem;font-size:.82rem;color:#52525b;max-width:400px;line-height:1.5}
+    footer{position:fixed;bottom:1.2rem;font-size:.75rem;color:#3f3f46}
+  </style>
+</head>
+<body>
+  <div class="logo">QR-Event</div>
+  <p class="tagline">Les invités scannent un QR code et déposent leurs photos, vidéos et messages — tout rassemblé après la fête.</p>
+
+  <div class="features">
+    <div class="feature">
+      <div class="icon">📷</div>
+      <h3>Photos & vidéos</h3>
+      <p>Chaque invité contribue depuis son téléphone.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">💬</div>
+      <h3>Messages</h3>
+      <p>Un mot, un souvenir, une anecdote — tout est gardé.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">🎉</div>
+      <h3>Événements</h3>
+      <p>Mariages, anniversaires, baptêmes, fêtes.</p>
+    </div>
+  </div>
+
+  <button class="cta" id="ctaBtn" onclick="handleClick()">Essayer QR-Event</button>
+  <p class="notice" id="notice"></p>
+
+  <footer>QR-Event &copy; 2025</footer>
+
+  <script>
+    function handleClick() {
+      const btn = document.getElementById('ctaBtn');
+      const notice = document.getElementById('notice');
+      btn.disabled = true;
+      btn.textContent = 'Bientôt disponible';
+      notice.textContent = 'Le site est en cours de finalisation. Restez connectés !';
+    }
+  </script>
+</body>
+</html>
