@@ -143,6 +143,20 @@
     .hero-texte .lede { margin: .9rem auto 0; max-width: 44ch; }
     .hero-marque { font-size: .8rem; letter-spacing: .28em; color: #C2502A; }
     .hero-cta { margin-top: 1.5rem; justify-content: center; }
+    .hero-offre {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .65rem; width: min(700px, 100%); margin: 1.5rem auto 0;
+      text-align: left;
+    }
+    .hero-offre-item {
+      display: grid; gap: .18rem; padding: .72rem .8rem;
+      border-left: 2px solid #C2502A; background: rgba(255,253,247,.66);
+    }
+    .hero-offre-item strong { font-size: .88rem; line-height: 1.2; }
+    .hero-offre-item span { color: #6B6055; font-size: .77rem; line-height: 1.25; }
+    @media (max-width: 600px) {
+      .hero-offre { grid-template-columns: 1fr; width: min(360px, 100%); }
+    }
 
     /* Phone mockup */
     .hero-tel {
@@ -416,11 +430,16 @@
       <div aria-hidden="true" class="hero-lueur"></div>
       <div class="wrap hero-texte">
         <p class="eyebrow rise d1 hero-marque">QR-Event</p>
-        <h1 class="display rise d2">Vos invités scannent.<br><em>Vous gardez tout.</em></h1>
-        <p class="lede rise d3">Un QR code sur les tables. Photos, vidéos, mots et messages vocaux arrivent au même endroit — sans application, sans compte.</p>
+        <h1 class="display rise d2">Un espace unique pour<br><em>collecter les souvenirs</em><br>de votre événement.</h1>
+        <p class="lede rise d3">QR-Event, c'est une galerie privée pour récupérer en un seul endroit les photos, vidéos, messages et vocaux envoyés par vos invités, simplement en scannant un QR code.</p>
         <div class="rise d4 btn-rangee hero-cta">
           <a href="https://qr-event.be/creer" class="btn btn-ember btn-lg">Créer mon événement</a>
           <a href="https://qr-event.be/e/demo" class="btn btn-ghost btn-lg">Voir un exemple</a>
+        </div>
+        <div class="hero-offre rise d4" aria-label="Ce que QR-Event comprend">
+          <div class="hero-offre-item"><strong>Une galerie à votre nom</strong><span>Vos souvenirs réunis au même endroit.</span></div>
+          <div class="hero-offre-item"><strong>Une participation immédiate</strong><span>Un scan, aucun compte, aucune appli.</span></div>
+          <div class="hero-offre-item"><strong>Une expérience personnalisée</strong><span>Thème, QR code et supports à imprimer.</span></div>
         </div>
       </div>
 
@@ -428,8 +447,8 @@
         <div class="tel-frame">
           <div class="tel-ecran">
             <div class="tel-logo">QR-Event</div>
-            <p class="tel-tagline">L'espace invité de Léo &amp; Emma</p>
-            <button class="tel-btn">Voir l'espace invité</button>
+            <p class="tel-tagline">Photos, vidéos, messages et vocaux de votre événement.</p>
+            <button class="tel-btn">Déposer un souvenir</button>
           </div>
         </div>
       </div>
@@ -460,7 +479,7 @@
     <!-- HOW IT WORKS -->
     <section id="comment" class="section">
       <div class="wrap">
-        <h2 class="display titre-bloc">Trois minutes pour vous.<br>Deux secondes pour eux.</h2>
+        <h2 class="display titre-bloc">Vous créez l'espace.<br>Vos invités font vivre l'événement.</h2>
 
         <ol class="etapes">
           <li class="etape">
@@ -516,7 +535,7 @@
     <!-- THEMES -->
     <section id="themes" class="section themes-section grain">
       <div class="wrap">
-        <h2 class="display titre-bloc">Vingt-six thèmes.<br>Et tout se règle.</h2>
+        <h2 class="display titre-bloc">Une expérience qui ressemble<br>à votre événement.</h2>
       </div>
 
       <div class="themes-defile">
@@ -615,8 +634,8 @@
     </svg>
     <section class="cta-final grain">
       <div class="wrap-narrow">
-        <h2 class="display">Mieux qu'un groupe WhatsApp.</h2>
-        <p>Vous voyez votre thème et votre QR code avant de payer.</p>
+        <h2 class="display">Tous les souvenirs. Un seul endroit.</h2>
+        <p>Créez votre espace, choisissez votre univers et partagez le QR code. Vos invités s'occupent du reste.</p>
         <a href="https://qr-event.be/creer" class="btn btn-lg cta-bouton">Créer mon événement</a>
       </div>
     </section>
